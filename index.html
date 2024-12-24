@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Tip</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crystal Tip</h1>
+
+        <!-- Display results -->
+        <div class="results">
+            <div class="result-box">
+                <h3>Bill Amount</h3>
+                <p id="bill-amount">--</p>
+                <p id="bill-breakdown" class="breakdown">--</p> <!-- Breakdown of Bill + Tax -->
+            </div>
+            <div class="result-box">
+                <h3>Updated Tip</h3>
+                <p id="updated-tip">--</p>
+                <p id="updated-tip-breakdown" class="breakdown">--</p> <!-- Breakdown of original tip -->
+            </div>
+            <div class="result-box">
+                <h3>Tip %</h3>
+                <p id="tip-percentage-display">--</p>
+                <p id="tip-percentage-breakdown" class="breakdown">--</p> <!-- Breakdown of actual tip percentage -->
+            </div>
+            <div class="result-box">
+                <h3>Rounded Total</h3>
+                <p id="rounded-total">--</p>
+                <p id="rounded-total-breakdown" class="breakdown">--</p> <!-- Breakdown of rounded total -->
+            </div>
+        </div>
+
+        <!-- Form for user input -->
+        <form id="tip-calculator-form">
+            <div class="inputs">
+                <label for="bill-amount-input">Bill Amount ($):</label>
+                <input type="number" id="bill-amount-input" name="bill-amount" required>
+
+                <label for="tax-amount-input">Tax Amount ($):</label>
+                <input type="number" id="tax-amount-input" name="tax-amount" required>
+
+                <label for="tip-percentage">Tip Percentage:</label>
+                <select id="tip-percentage" name="tip-percentage" required>
+                    <option value="15">15%</option>
+                    <option value="17">17%</option>
+                    <option value="20">20%</option>
+                    <option value="">Custom</option>
+                </select>
+                <input type="number" id="custom-tip" placeholder="Enter custom tip percentage" style="display: none;">
+
+                <button type="button" id="calculate-button">Calculate</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
